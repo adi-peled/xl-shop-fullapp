@@ -1,0 +1,46 @@
+
+
+.hidden{
+    display: none;
+}
+.carousel-container {
+    width: 500px;
+    // height: 100%;
+}
+.test{
+    height: 100%;
+}
+.carousel-img{
+    width: 500px !important;
+    object-fit: cover;
+}
+.react-multi-carousel-dot-list{
+    bottom: 10px !important;
+}
+.react-multi-carousel-list {
+    li {
+        width: unset !important;
+    }
+}
+
+
+@media (max-width: 940px){
+    .carousel-container {
+        width: 400px;
+        // height: 100%;
+    }
+    .carousel-img{
+        width: 400px !important;
+    }
+}
+
+@media (max-width: 400px){
+    .carousel-container {
+        width: 350px;
+        // height: 100%;
+    }
+    .carousel-img{
+        width: 350px !important;
+    }
+}
+

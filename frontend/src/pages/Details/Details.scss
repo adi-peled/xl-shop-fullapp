@@ -1,0 +1,236 @@
+.item-details {
+    text-transform: capitalize;
+    margin-top: 30px;
+    justify-content: space-around;
+
+    img {
+        // height: 100%;
+    }
+
+    .title-like {
+        padding: 15px;
+        font-weight: 500;
+        text-transform: none;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 20px;
+        ;
+
+        h1 {
+            // font-size: 35px;
+        }
+
+        .detail {
+            font-size: 20px;
+        }
+
+        .price {
+            color: lighten(red, 15%);
+        }
+
+        .signin-button {
+            margin-top: 0;
+            width: 400px;
+        }
+    }
+
+}
+
+
+.product-intro {
+
+    .price {
+        color: black;
+        font-size: 24px;
+        font-family: 'Arial Black';
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+@media (max-width: 840px) {
+    .item-details {
+        .item-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .item-container {
+        margin-left: 15px;
+    }
+
+    .details {
+        .signin-button {
+            margin-top: 30px !important;
+        }
+    }
+}
+
+
+
+
+.product-size {
+    border-top: 1px dashed #e5e5e5;
+    padding-top: 10px;
+
+}
+
+.pick {
+    margin-bottom: 5px;
+}
+
+.option {
+    padding: 0;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    outline: none;
+    margin: .3rem;
+    border: 2px solid black;
+}
+
+.option-size {
+    background-color: black;
+    color: white;
+
+    &:hover {
+        background-color: lighten(black, 15%) !important;
+    }
+}
+
+.option-red {
+    background-color: rgb(158, 37, 37);
+
+    &:hover {
+        background-color: lighten(rgb(158, 37, 37), 15%) !important;
+    }
+}
+
+.option-blue {
+    background-color: rgb(47, 47, 138);
+
+    &:hover {
+        background-color: lighten(rgb(47, 47, 138), 15%) !important;
+    }
+}
+
+.option-green {
+    background-color: rgb(96, 129, 96);
+
+    &:hover {
+        background-color: lighten(green, 15%) !important;
+    }
+}
+
+.option-yellow {
+    background-color: rgb(255, 255, 163);
+
+    &:hover {
+        background-color: lighten(yellow, 15%) !important;
+    }
+}
+
+.option-pink {
+    background-color: pink;
+
+    &:hover {
+        background-color: lighten(pink, 5%) !important;
+    }
+}
+
+.option-purple {
+    background-color: purple;
+
+    &:hover {
+        background-color: lighten(purple, 15%) !important;
+    }
+}
+
+.option-lightblue {
+    background-color: lightblue;
+
+    &:hover {
+        background-color: lighten(lightblue, 5%) !important;
+    }
+}
+
+
+.option-white {
+    background-color: white;
+    color: black;
+
+    &:hover {
+        background-color: lighten(white, 15%) !important;
+    }
+}
+
+.option-orange {
+    background-color: orange;
+
+    &:hover {
+        background-color: lighten(orange, 15%) !important;
+    }
+}
+
+.option-black {
+    background-color: black;
+    color: white;
+
+    &:hover {
+        background-color: lighten(black, 15%) !important;
+    }
+}
+
+.option-gray {
+    background-color: gray;
+
+    &:hover {
+        background-color: lighten(gray, 15%) !important;
+    }
+}
+
+.option-lightgreen {
+    background-color: lightgreen;
+
+    &:hover {
+        background-color: lighten(lightgreen, 5%) !important;
+    }
+}
+
+
+.option-maroon {
+    background-color: maroon;
+
+    &:hover {
+        background-color: lighten(maroon, 15%) !important;
+    }
+}
+
+.option-brown {
+    background-color:  #86592d;
+    &:hover {
+        background-color: lighten( #86592d, 15%) !important;
+    }
+}
+
+.option-beige {
+    background-color: beige;
+    &:hover {
+        background-color: lighten( beige, 3%) !important;
+    }
+}
+.option-jeans {
+  background-color: #5dadec;
+    &:hover {
+        background-color: lighten( #5dadec, 3%) !important;
+    }
+}

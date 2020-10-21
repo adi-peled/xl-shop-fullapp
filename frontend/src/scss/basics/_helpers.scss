@@ -1,0 +1,142 @@
+.grid {
+    display: grid;
+}
+
+//flex-helper
+.flex {
+    display: flex;
+}
+
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.lightblue {
+    color: #255872;
+}
+
+.coins {
+    color: #35ca35;
+}
+
+.text-he {
+    direction: ltr;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.loading {
+    width: 100vh;
+    margin: 25% 50%;
+
+    // background: rgb(244,100,100);
+    svg {
+
+        // fill: linear-gradient(90deg, rgba(244,100,100,1) 0%, rgba(255,255,255,1) 58%, rgba(0,0,0,1) 100%) !important;
+        // fill:#255872
+    }
+}
+
+.app-input {
+    height: 35px;
+    padding: 3px 10px;
+    font-size: 13px;
+    border: 1px solid #C7C7C7;
+    width: 100%;
+    border-radius: 0;
+    outline: none;
+
+    &:focus {
+        // color: #D3FCD5;
+    }
+}
+
+.app-btn {
+    color: white;
+    background-color:#2d383a;
+    margin-top: 10px;
+    height: 50px;
+    line-height: 49px;
+    font-size: 18px;
+    padding: 0 19px;
+    cursor: pointer;
+    &:hover{
+color: #f79898;
+    }
+}
+
+
+.space-between {
+    justify-content: space-between;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.capi {
+    text-transform: capitalize;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.right {
+    text-align: right !important;
+}
+
+.align-self {
+    align-self: center;
+}
+
+
+
+.btn-bitcoin {
+    color: white;
+    font-size: 22px;
+    border: solid 1px #E57A44;
+    padding: 3px 5px;
+    margin-top: 5px;
+    text-align: center;
+    display: inline-block;
+    width: 270px;
+    background-color: #4C86A8;
+
+    &:hover {
+        background-color: #E57A44;
+    }
+}
+
+// media-helpers
+.square-ratio {
+    @include aspect-ratio(1, 1);
+}
+
+.video-ratio {
+    @include aspect-ratio(16, 9);
+}
+
+.poster-ratio {
+    @include aspect-ratio(1, 1.5);
+}

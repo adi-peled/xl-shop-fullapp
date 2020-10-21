@@ -1,0 +1,23 @@
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    // justify-content: space-between;
+}
+
+@media (max-width: 450px){
+
+    .item-list{
+        flex-wrap: unset;
+        flex-direction: column;
+        align-items: center;
+    }
+    .home{
+        h2{
+            margin: 1rem;
+        }
+        h3{
+            margin: 1rem;
+        }
+    }
+}

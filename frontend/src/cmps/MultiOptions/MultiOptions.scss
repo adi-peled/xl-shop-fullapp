@@ -1,0 +1,24 @@
+.multi-select {
+    width: 200px;
+
+    .dropdown-container {
+        width: 100%;
+
+        .dropdown-content>* {
+            width: 100%;
+        }
+
+    }
+
+}
+
+
+
+.unsaved-changes {
+    color: red;
+}
+
+
+.saved-changes {
+    color: green;
+}

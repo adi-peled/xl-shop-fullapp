@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  outline: none;
+}
+
+.app-container {
+  width: 1200px;
+  align-self: center;
+  margin-top: 20px;
+  min-height: 100vh;
+  padding: 0px 15px;
+}
+
+
+@media (max-width:1200px) {
+  .app-container {
+    width: 100%;
+  }
+}
+
+@media (max-width:900px) {
+  .app-container {
+    width: 100%;
+  }
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+// setup
+@import './scss/setup/_variables.scss';
+@import './scss/setup/_functions.scss';
+@import './scss/setup/_mixin.scss';
+@import './scss/setup/_typography.scss';
+
+
+// basics
+@import './scss/basics/_helpers.scss';
+@import './scss/basics/_layout.scss';
+@import './scss/basics/_buttons.scss';
+@import './scss/basics/_links.scss';
+@import './scss/basics/_base.scss';

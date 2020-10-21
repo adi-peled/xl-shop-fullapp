@@ -1,0 +1,142 @@
+.signin-button {
+    width: 100%;
+    color: white;
+    background-color: black;
+    margin-top: 10px;
+    height: 50px;
+    line-height: 49px;
+    font-size: 18px;
+    padding: 0 19px;
+    cursor: pointer;
+}
+
+.no-account {
+    margin-top: 40px;
+    line-height: 34px;
+    text-align: center;
+    align-self: center;
+    display: flex;
+
+    a {
+        padding: 0 14px;
+        align-self: center;
+        font-size: 16px;
+        white-space: nowrap;
+        height: 34px;
+        margin-left: 10px;
+        background-color: #fff;
+        color: #231f20;
+        border: 1px solid #231f20;
+    }
+}
+
+
+.signup-form {
+    flex-direction: column;
+    width: 35%;
+
+    input {
+        height: 35px;
+        padding: 3px 10px;
+        font-size: 13px;
+        border: 1px solid #C7C7C7;
+        color: #231F20;
+        width: 100%;
+        border-radius: 0;
+        outline: none;
+    }
+
+    a {
+        color: black;
+    }
+
+    input:focus {
+        // border: 1px solid $clr1;
+    }
+
+    .form-checkbox {
+        height: 13px;
+        width: 13px;
+        margin-left: 1px;
+        margin-right: 5px;
+    }
+
+    label {
+        margin-bottom: 3px;
+    }
+
+    .upload-btn {
+        background-color: grey;
+    }
+}
+
+.form-halfRow {
+    flex-shrink: 0;
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.form-halfRow:first-child {
+    padding-right: 5px;
+}
+
+.form-halfRow:last-child {
+    padding-left: 5px;
+}
+
+
+
+.signup-section {
+    padding: 30px 10px;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 36px;
+        line-height: 1;
+        align-self: center;
+        margin-bottom: 15px;
+    }
+}
+
+.signup-form-caption {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 11px;
+}
+
+.signup-button {
+    cursor: pointer;
+    border: 0;
+    background-color: black;
+    color: white;
+    height: 50px;
+    line-height: 49px;
+    font-size: 18px;
+    padding: 0 19px;
+    margin-top: 20px;
+}
+
+
+
+
+@media (max-width:1200px) {
+    .signup-form {
+        width: 40%;
+    }
+}
+
+
+
+
+@media (max-width:900px) {
+    .signup-form {
+        width: 60%;
+    }
+}
+
+@media (max-width:400px) {
+    .signup-form {
+        width: 90%;
+    }
+}

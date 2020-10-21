@@ -1,0 +1,133 @@
+header {
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2d383a;
+    color: whitesmoke;
+
+    .nav-header {
+
+        width: 30%;
+        height: 100%;
+        max-width: 350px;
+        align-items: center;
+        justify-content: flex-end;
+
+        li {
+            list-style: none;
+            margin-left: 15px;
+
+            .login {
+                color: whitesmoke;
+            }
+
+            a {
+                font-size: 20px;
+                height: 100%;
+                text-transform: capitalize;
+
+                &:hover {
+                    color: #f79898;
+                }
+            }
+        }
+
+        .svg {
+            fill: white;
+            height: 30px;
+            width: 30px;
+
+            &:hover {
+                fill: #f79898;
+            }
+        }
+    }
+
+
+    .admin {
+        color: whitesmoke;
+    }
+
+    .login {
+        color: whitesmoke;
+    }
+
+    .logo {
+        color: whitesmoke;
+
+        img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    .btn-menu {
+        height: 45px !important;
+        width: 35px !important;
+        cursor: pointer;
+    }
+
+    .btn-logout {
+        background-color: inherit;
+        font-size: 20px;
+        color: white;
+
+        &:hover {
+            color: #f79898;
+        }
+    }
+
+    .menu {
+        transition: transform .8s, box-shadow .3s;
+        position: fixed;
+        padding: 0px;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 150px;
+        transition-property: width;
+        background-color: hsla(0, 0%, 100%, .8);
+        transition: 1s width;
+
+        z-index: 1;
+        li {
+            height: 10%;
+
+        }
+
+        button,
+        a {
+            font-size: 20px;
+            height: 100%;
+            text-transform: capitalize;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            width: 100%;
+            border-bottom: 1px solid grey;
+
+            &:hover {
+                color: #f79898
+            }
+        }
+
+    }
+
+
+
+
+    .menu-open {}
+
+    .screen.menu-open {
+        cursor: pointer;
+        position: fixed;
+        height: 200%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.25);
+        z-index: 1;
+        left: 0;
+    }
+}
