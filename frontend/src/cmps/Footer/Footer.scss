@@ -1,10 +1,10 @@
 footer {
+    padding: 15px 30px;
+
     h3 {
         margin-bottom: 10px;
         font-size: 28px;
     }
-
-    padding: 15px 30px;
 
     * {
 
@@ -22,8 +22,6 @@ footer {
         height: 25px;
         margin: 0px 5px;
         fill: white;
-
-
     }
 
     ul {
@@ -41,18 +39,11 @@ footer {
 
             }
         }
-
-
-    
     }
+}
 
-
-
-
-    .copyrights {
-        text-align: center;
+@media(max-width:600px) {
+    .content {
+        flex-direction: column;
     }
-
-
-
 }

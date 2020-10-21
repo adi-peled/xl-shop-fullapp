@@ -31,7 +31,7 @@ class _Login extends Component {
     login = async (ev) => {
         ev.preventDefault()
         const user = await userService.login(this.state.user)
-        if (typeof (user) !== 'string') {
+        if (typeof (user) !== 'string' && user) {
             this.props.history.push('/')
             this.props.setUser()
             const Toast = Swal.mixin({

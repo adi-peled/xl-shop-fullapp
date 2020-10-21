@@ -42,14 +42,21 @@ function _OrderDetails(props) {
                                 <p>
                                     {item.name}
                                 </p>
-                                <p>
-                                    Color: {item.color}
-                                </p>
-                                <p>
-                                    Size: {item.size}
-                                </p>
-                                <p>
-                                    Price: ${item.price}
+                                <div className="flex detail">
+                                    <label >Color:</label>
+                                    <div style={{ backgroundColor: item.color }} className="option " />
+                                </div>
+
+                                <div className="flex detail">
+                                    <label >Size:</label>
+
+                                    <div className="option flex">
+                                        {item.size}
+                                    </div>
+
+                                </div>
+                                <p className="price">
+                                    ${item.price}
                                 </p>
                             </div>
                         </div>

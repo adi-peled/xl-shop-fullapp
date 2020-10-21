@@ -80,7 +80,7 @@ function sendMailToConfirm(email, token, type) {
 }
 
 function _createToken(param) {
-    return jwt.sign({ data: param }, 'asdf1093KMnzfrgrdgrrdjtfjfhljvasdu09123nlasdasdf', { expiresIn: '1d' });
+    return jwt.sign({ data: param },process.env.emailSecret, { expiresIn: '1d' });
 }
 
 

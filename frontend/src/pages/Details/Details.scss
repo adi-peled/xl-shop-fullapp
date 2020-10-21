@@ -38,6 +38,19 @@
         }
     }
 
+    .option {
+        padding: 0;
+        margin-bottom: 3px;
+        margin-left: 3px;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        outline: none;
+        margin: .3rem;
+        border: 2px solid black;
+        
+    }
+
 }
 
 
@@ -52,6 +65,22 @@
 }
 
 
+
+.edit-btn {
+    color: black;
+    background-color: white;
+    margin-top: 15px;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: fit-content;
+    border: 1px solid black;
+
+    &:hover {
+        color: #f79898;
+    }
+
+}
 
 
 @media (max-width: 840px) {
@@ -86,17 +115,6 @@
     margin-bottom: 5px;
 }
 
-.option {
-    padding: 0;
-    margin-bottom: 3px;
-    margin-left: 3px;
-    width: 2.4rem;
-    height: 2.4rem;
-    border-radius: 50%;
-    outline: none;
-    margin: .3rem;
-    border: 2px solid black;
-}
 
 .option-size {
     background-color: black;
@@ -216,21 +234,25 @@
 }
 
 .option-brown {
-    background-color:  #86592d;
+    background-color: #86592d;
+
     &:hover {
-        background-color: lighten( #86592d, 15%) !important;
+        background-color: lighten(#86592d, 15%) !important;
     }
 }
 
 .option-beige {
     background-color: beige;
+
     &:hover {
-        background-color: lighten( beige, 3%) !important;
+        background-color: lighten(beige, 3%) !important;
     }
 }
+
 .option-jeans {
-  background-color: #5dadec;
+    background-color: #5dadec;
+
     &:hover {
-        background-color: lighten( #5dadec, 3%) !important;
+        background-color: lighten(#5dadec, 3%) !important;
     }
 }

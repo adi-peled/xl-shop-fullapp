@@ -130,6 +130,9 @@ function _Details(props) {
                     <div className="category">
                         <span>  {item.category}</span>
                     </div>
+                    <div className="subcategory">
+                        <span>  {item.subcategory}</span>
+                    </div>
                     <div className="size ">
                         <div className=" detail pick">pick size: {chosenSize}</div>
                         {item.sizes.map(size => {
@@ -142,8 +145,8 @@ function _Details(props) {
                             return <button onClick={() => setColor(color)} key={color} className={'option option-' + color + (color === chosenColor)}></button>
                         })}
                     </div>
-                    <button onClick={() => addToCart()} className="signin-button">Add To Cart</button>
-                    {user && user.isAdmin && <Link to={`/item/edit/${item._id}`} >Edit </Link>}
+                    <button onClick={() => addToCart()} className="app-btn">Add To Cart</button>
+                    {user && user.isAdmin && <Link className="edit-btn" to={`/item/edit/${item._id}`} >Edit </Link>}
                 </div>
             </div>
             <div >

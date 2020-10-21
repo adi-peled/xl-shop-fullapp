@@ -30,7 +30,7 @@ class _SignUp extends Component {
 
       return
     }
-    if (!email || !fname || !lname || !this.state.elIsAgreeTerms) {
+    if (!email || !fname || !lname) {
       utilService.swal('center',2500,'error','Please fill all the form and accept terms of use')
       return
     }

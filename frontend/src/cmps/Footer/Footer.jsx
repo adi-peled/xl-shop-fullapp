@@ -81,9 +81,7 @@ export function Footer() {
                     </ul>
                 </div>
             </div>
-            <div className="copyrights">
-                ©  copyrights to "מידות גדולות"
-                </div>
+      
 
         </footer>
 

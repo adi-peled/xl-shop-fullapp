@@ -112,15 +112,20 @@ function _Cart(props) {
                                 <p>
                                     {item.name}
                                 </p>
-                                <p>
-                                    {item.color}
-                                </p>
-                                <p>
-                                    {item.size}
-                                </p>
-                                <p>
-                                    ${item.price}
-                                </p>
+                                <div className="flex detail">
+                                    <label >Color:</label>
+                                    <div style={{ backgroundColor: item.color }} className="option " />
+                                </div>
+
+                                <div className="flex detail">
+                                    <label >Size:</label>
+
+                                    <div className="option flex">
+                                        {item.size}
+                                    </div>
+
+                                </div>
+                               
                             </div>
                             <div className="cancel-edit-cart-item">
                                 <DeleteSvg className="delete-svg" onClick={() => removeFromCart(item._id)}></DeleteSvg>
@@ -151,10 +156,10 @@ function _Cart(props) {
                     Total : ${order.totalPrice}
                 </p>
                 <div>
-                משלוחים לכל הארץ
-                משלוח מסכום של 300 ש"ח חינם
-                דמי משלוח בפחות מ-300 ש"ח יהיו בסך 45 ש"ח  
-                החזרת מוצר וביטול עיסקה עד חודש עם הגעה למקום פיזית עם המוצר        
+                    משלוחים לכל הארץ
+                    משלוח מסכום של 300 ש"ח חינם
+                    דמי משלוח בפחות מ-300 ש"ח יהיו בסך 45 ש"ח
+                    החזרת מוצר וביטול עיסקה עד חודש עם הגעה למקום פיזית עם המוצר
                 </div>
                 <button onClick={buyCart}>  Buy Now </button>
             </div>}
