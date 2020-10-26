@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import 'react-input-range/lib/css/index.css'
 import './Filter.scss'
 
 export function Filter(props) {
 
+    const elClr = createRef()
+    const elSub = createRef()
+    const elCategory = createRef()
+    const elPrice = createRef()
+
     const [state, setState] = useState({
-        categoryStyle: { display: 'none' },
-        subcategoryStyle: { display: 'none' },
-        colorsStyle: { display: 'none' },
-        priceStyle: { display: 'none' },
+        categoryStyle: { display: 'none', top: '' },
+        subcategoryStyle: { display: 'none', top: '' },
+        colorsStyle: { display: 'none', top: '' },
+        priceStyle: { display: 'none', top: '' },
         shirts: ['Polo-Shirts', 'T-Shirts', 'Button-Down-Shirts'],
-        pants: ['Elegant-Pשnts', 'Jeans', 'Cotton-Pants'],
+        pants: ['Elegant-Pants', 'Jeans', 'Cotton-Pants'],
         accessories: ['Coats', 'Suits', 'Socks', 'Belts', 'Underpants', 'Tank - Tops', 'Ties',
             'Tricot', 'Potter - shorts', 'Sweaters', 'Shlikes', 'Bermudas', 'Cardigans', 'Hoddies'],
         filterBy: {
@@ -20,8 +25,19 @@ export function Filter(props) {
             subcategory: '',
             sortByPrice: ''
         },
+        size: ''
+
 
     })
+
+    function setTopStyle(el, style) {
+        var rect = el.current.getBoundingClientRect();
+        const pageY = rect.bottom
+
+        setState(state => ({ ...state, [style]: { ...state[style], top: pageY, display: 'flex' } }))
+        console.log(pageY, style, state);
+    }
+
 
     useEffect(() => {
         props.setFilter('', state.filterBy)
@@ -62,7 +78,6 @@ export function Filter(props) {
 
 
 
-
     function toggleColors() {
         if (state.colorsStyle.display === 'flex') {
             setState(state => ({ ...state, colorsStyle: { ...state.colorsStyle, display: 'none' } }))
@@ -70,7 +85,7 @@ export function Filter(props) {
             setState(state => ({ ...state, subcategoryStyle: { ...state.subcategoryStyle, display: 'none' } }))
             setState(state => ({ ...state, priceStyle: { ...state.priceStyle, display: 'none' } }))
             setState(state => ({ ...state, categoryStyle: { ...state.categoryStyle, display: 'none' } }))
-            setState(state => ({ ...state, colorsStyle: { ...state.colorsStyle, display: 'flex' } }))
+            setTopStyle(elClr, 'colorsStyle')
         }
     }
 
@@ -79,8 +94,8 @@ export function Filter(props) {
             setState(state => ({ ...state, priceStyle: { ...state.priceStyle, display: 'none' } }))
         } else {
             setState(state => ({ ...state, subcategoryStyle: { ...state.subcategoryStyle, display: 'none' } }))
-            setState(state => ({ ...state, priceStyle: { ...state.priceStyle, display: 'flex' } }))
             setState(state => ({ ...state, categoryStyle: { ...state.categoryStyle, display: 'none' } }))
+            setTopStyle(elPrice, 'priceStyle')
             setState(state => ({ ...state, colorsStyle: { ...state.colorsStyle, display: 'none' } }))
         }
     }
@@ -91,8 +106,8 @@ export function Filter(props) {
         } else {
             setState(state => ({ ...state, subcategoryStyle: { ...state.subcategoryStyle, display: 'none' } }))
             setState(state => ({ ...state, priceStyle: { ...state.priceStyle, display: 'none' } }))
-            setState(state => ({ ...state, categoryStyle: { ...state.categoryStyle, display: 'flex' } }))
             setState(state => ({ ...state, colorsStyle: { ...state.colorsStyle, display: 'none' } }))
+            setTopStyle(elCategory, 'categoryStyle')
         }
     }
 
@@ -100,12 +115,47 @@ export function Filter(props) {
         if (state.subcategoryStyle.display === 'flex') {
             setState(state => ({ ...state, subcategoryStyle: { ...state.subcategoryStyle, display: 'none' } }))
         } else {
-            setState(state => ({ ...state, subcategoryStyle: { ...state.subcategoryStyle, display: 'flex' } }))
             setState(state => ({ ...state, priceStyle: { ...state.priceStyle, display: 'none' } }))
             setState(state => ({ ...state, categoryStyle: { ...state.categoryStyle, display: 'none' } }))
             setState(state => ({ ...state, colorsStyle: { ...state.colorsStyle, display: 'none' } }))
+            setTopStyle(elSub, 'subcategoryStyle')
         }
     }
+
+
+    function updateSize() {
+        // const width = window.innerWidth
+        // setState(state => ({ ...state, size: width }))
+
+        setState({
+            categoryStyle: { display: 'none', top: '' },
+            subcategoryStyle: { display: 'none', top: '' },
+            colorsStyle: { display: 'none', top: '' },
+            priceStyle: { display: 'none', top: '' },
+            shirts: ['Polo-Shirts', 'T-Shirts', 'Button-Down-Shirts'],
+            pants: ['Elegant-Pשnts', 'Jeans', 'Cotton-Pants'],
+            accessories: ['Coats', 'Suits', 'Socks', 'Belts', 'Underpants', 'Tank - Tops', 'Ties',
+                'Tricot', 'Potter - shorts', 'Sweaters', 'Shlikes', 'Bermudas', 'Cardigans', 'Hoddies'],
+            filterBy: {
+                name: '',
+                category: '',
+                color: '',
+                subcategory: '',
+                sortByPrice: ''
+            },
+            size: ''
+        })
+
+    }
+
+    useEffect(() => {
+
+        window.addEventListener('resize', updateSize);
+        return () => window.removeEventListener('resize', updateSize);
+
+    }, [])
+
+
 
     return (
         <form className="filter  flex" onSubmit={(ev) => props.setFilter(ev, state.filterBy)} >
@@ -116,7 +166,7 @@ export function Filter(props) {
                 </div>
                 <div className="select flex column">
                     <label > Category</label>
-                    <button onClick={() => toggleCategory()} className='btn-sort'  >{state.category}</button>
+                    <button onClick={() => toggleCategory()} ref={elCategory} className='btn-sort'  >{state.filterBy.category}</button>
                     <ul style={state.categoryStyle} className=" flex column" >
                         <li className={state.filterBy.category === 'shirts' ? 'active' : ''} onClick={() => setCategory('shirts')} >Shirts</li>
                         <li className={state.filterBy.category === 'pants' ? 'active' : ''} onClick={() => setCategory('pants')} >Pants</li>
@@ -125,7 +175,7 @@ export function Filter(props) {
                 </div>
                 <div className="select flex column">
                     <label > Subcategory</label>
-                    <button onClick={() => toggleSubCategory()} className='btn-sort'  >{state.filterBy.subcategory}</button>
+                    <button onClick={() => toggleSubCategory()} ref={elSub} className='btn-sort'  >{state.filterBy.subcategory}</button>
                     <ul style={state.subcategoryStyle} className="flex column">
                         {state.filterBy.category && state[state.filterBy.category].map(c => {
                             return <li key={c} className={state.filterBy.subcategory === c ? 'active' : ''} onClick={() => setSubCategory(c)} > {c}    </li>
@@ -134,7 +184,7 @@ export function Filter(props) {
                 </div>
                 <div className="select flex column">
                     <label > Color</label>
-                    <button onClick={() => toggleColors()} className='btn-sort' >{state.filterBy.color}</button>
+                    <button onClick={(ev) => toggleColors(ev)} ref={elClr} className='btn-sort' >{state.filterBy.color}</button>
                     <ul style={state.colorsStyle} className="colors-container flex ">
                         <li title="green" onClick={() => setColor('green')} className="opt option-green" ></li>
                         <li title="jeans" onClick={() => setColor('jeans')} className="opt option-jeans" ></li>
@@ -152,7 +202,7 @@ export function Filter(props) {
                 </div>
                 <div className="select flex column">
                     <label >Price</label>
-                    <button onClick={() => togglePrice()} className='btn-sort'  >{state.filterBy.sortByPrice}</button>
+                    <button onClick={() => togglePrice()} ref={elPrice} className='btn-sort'  >{state.filterBy.sortByPrice}</button>
                     <ul style={state.priceStyle} className=" flex column" >
                         <li className={state.filterBy.sortByPrice === 'Low-To-High' ? 'active' : ''} onClick={() => setPrice('Low-To-High')} >Low To High</li>
                         <li className={state.filterBy.sortByPrice === 'High-To-Low' ? 'active' : ''} onClick={() => setPrice('High-To-Low')} >High To Low</li>

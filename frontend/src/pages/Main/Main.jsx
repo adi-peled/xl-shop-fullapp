@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { List } from '../../cmps/List/List'
@@ -11,7 +11,6 @@ import utilService from '../../services/utilService'
 function _Main(props) {
 
     const [state, setState] = useState({ subcategory: '' })
-
     useEffect(() => {
         const { subcategory } = props.match.params
         setState({ subcategory })
@@ -22,12 +21,15 @@ function _Main(props) {
 
 
 
+
+
+   
     async function toggleLike(ev, liked, item) {
         ev.preventDefault()
-        if (!props.user){
-            utilService.swal('center',2500,'error','Please login')
+        if (!props.user) {
+            utilService.swal('center', 2500, 'error', 'Please login')
             return
-    } 
+        }
         if (liked) {
             const index = props.user.favs.findIndex(i => i._id === item._id)
             props.user.favs.splice(index, 1)
@@ -51,10 +53,11 @@ function _Main(props) {
     }
 
 
+
     let { items, user } = props
     const { subcategory } = state
     return (
-        <main>
+        <main >
             <Filter subcategory={subcategory} setFilter={setFilter}></Filter>
             { items && <List items={items} toggleLike={toggleLike} removeItem={removeItem} ></List>}
             { user && user.isAdmin && < Link className="app-btn" to="/item/edit" replace={true}  >   Add Item</Link>}

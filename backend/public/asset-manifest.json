@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6704a16c.chunk.css",
+    "main.js": "/static/js/main.1b88da17.chunk.js",
+    "main.js.map": "/static/js/main.1b88da17.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c8a21426.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c8a21426.js.map",
+    "static/css/2.381b331f.chunk.css": "/static/css/2.381b331f.chunk.css",
+    "static/js/2.f6feb716.chunk.js": "/static/js/2.f6feb716.chunk.js",
+    "static/js/2.f6feb716.chunk.js.map": "/static/js/2.f6feb716.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.52558b682886042f02be667a8cc92f62.js": "/precache-manifest.52558b682886042f02be667a8cc92f62.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.381b331f.chunk.css.map": "/static/css/2.381b331f.chunk.css.map",
+    "static/css/main.6704a16c.chunk.css.map": "/static/css/main.6704a16c.chunk.css.map",
+    "static/js/2.f6feb716.chunk.js.LICENSE.txt": "/static/js/2.f6feb716.chunk.js.LICENSE.txt",
+    "static/media/Home.scss": "/static/media/1.f49ea541.jpeg",
+    "static/media/App.scss": "/static/media/SecularOne-Regular.be1378e6.ttf",
+    "static/media/cart.31fddad0.svg": "/static/media/cart.31fddad0.svg",
+    "static/media/delete.b840e171.svg": "/static/media/delete.b840e171.svg",
+    "static/media/edit.539b3c38.svg": "/static/media/edit.539b3c38.svg",
+    "static/media/email.a64778f6.svg": "/static/media/email.a64778f6.svg",
+    "static/media/heart-color2.d9b06de9.svg": "/static/media/heart-color2.d9b06de9.svg",
+    "static/media/heart-white2.c7ecf461.svg": "/static/media/heart-white2.c7ecf461.svg",
+    "static/media/location.d16fde20.svg": "/static/media/location.d16fde20.svg",
+    "static/media/logo.png": "/static/media/logo.a3b03789.png",
+    "static/media/menu.37b1a497.svg": "/static/media/menu.37b1a497.svg",
+    "static/media/phone.232a8231.svg": "/static/media/phone.232a8231.svg",
+    "static/media/profile.9960d83e.svg": "/static/media/profile.9960d83e.svg",
+    "static/media/styles.css": "/static/media/revicons.2feb69cc.eot",
+    "static/media/shirt-test.jpeg": "/static/media/shirt-test.9ee56354.jpeg",
+    "static/media/shop.e88975e4.svg": "/static/media/shop.e88975e4.svg",
+    "static/media/show-password.png": "/static/media/show-password.0d8f9139.png",
+    "static/media/whatsapp.eca05782.svg": "/static/media/whatsapp.eca05782.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c8a21426.js",
+    "static/css/2.381b331f.chunk.css",
+    "static/js/2.f6feb716.chunk.js",
+    "static/css/main.6704a16c.chunk.css",
+    "static/js/main.1b88da17.chunk.js"
+  ]
+}

@@ -3,7 +3,7 @@ const logger = require('../../services/logger.service')
 const authService = require('../auth/auth.service');
 const authController = require('../auth/auth.controller')
 const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 
 const nodemailer = require("nodemailer");
 const { getById } = require('./user.service');
