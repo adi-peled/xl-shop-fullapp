@@ -16,11 +16,6 @@ function _Profile(props) {
     const { user } = props
     const history = useHistory()
 
-    useEffect(() => {
-        if (!props.user) {
-            history.push('/')
-        }
-    }, [])
 
     function setCurrent(current) {
         setState(state => ({ ...state, current }))
