@@ -30,6 +30,10 @@ function _Cart(props) {
     })
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+    useEffect(() => {
         if (user) {
             let totalPrice = 0
             user.cart.forEach(item => {
@@ -55,14 +59,12 @@ function _Cart(props) {
     }
 
     async function buyCart() {
-
         if (!order.address || !order.phoneNumber) {
             utilService.swal('center', 2500, 'error', 'Please add Phone number and Address')
 
             return
         }
         user.cart = []
-
         user.orders.unshift(order)
         await props.saveUser(user)
         await props.setUser()
@@ -79,9 +81,6 @@ function _Cart(props) {
             title: 'Order has been set, soon we will call you in order to finish the Purchase '
         })
     }
-
-
-
 
     function makeId() {
         return (Date.now().toString(36) + Math.random().toString(36).substr(2, 5)).toUpperCase();
@@ -125,7 +124,7 @@ function _Cart(props) {
                                     </div>
 
                                 </div>
-                               
+
                             </div>
                             <div className="cancel-edit-cart-item">
                                 <DeleteSvg className="delete-svg" onClick={() => removeFromCart(item._id)}></DeleteSvg>

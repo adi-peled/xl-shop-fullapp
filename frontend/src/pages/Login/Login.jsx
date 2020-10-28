@@ -18,6 +18,7 @@ class _Login extends Component {
 
 
     componentDidMount() {
+        window.scrollTo(0, 0)
         if (this.props.user) {
             this.props.history.push('/')
         }

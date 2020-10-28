@@ -11,6 +11,11 @@ import utilService from '../../services/utilService'
 function _Main(props) {
 
     const [state, setState] = useState({ subcategory: '' })
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     useEffect(() => {
         const { subcategory } = props.match.params
         setState({ subcategory })
@@ -19,11 +24,6 @@ function _Main(props) {
         }
     }, [props.match.params])
 
-
-
-
-
-   
     async function toggleLike(ev, liked, item) {
         ev.preventDefault()
         if (!props.user) {

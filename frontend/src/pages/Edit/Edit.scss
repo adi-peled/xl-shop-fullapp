@@ -1,8 +1,12 @@
 .edit {
     text-transform: capitalize;
-        
+
     button {
         text-transform: capitalize;
+    }
+
+    .upload {
+        width: 25%;
     }
 
     img {
@@ -16,7 +20,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 480px;
+        min-width: 480px;
 
         div {
             display: flex;
@@ -45,42 +49,121 @@
 
     .edit {
         text-transform: capitalize;
-            flex-direction: column;
+
         button {
             text-transform: capitalize;
         }
-    
+
         img {
             height: 100px;
             width: 100px;
         }
-    
+
         height: 70vh;
-    
+
         .details {
             display: flex;
             flex-direction: column;
-            width: 100%;
-    
+
             div {
                 display: flex;
                 justify-content: space-between;
-    
+
                 select {
                     width: 50%;
                 }
-    
+
                 input {
-                    width: 70%;
+                    width: 50%;
                 }
-    
             }
-    
-    
         }
-    
-    
-    
-    
     }
+}
+
+@media (max-width: 800px) {
+    .edit {
+        flex-direction: column;
+
+        .mar-btm {
+            margin-bottom: 15px;
+        }
+
+        .details {
+            margin: 0 auto;
+            width: 480px;
+        }
+
+        .upload {
+            display: flex;
+            width: unset;
+
+            .file-input {
+                width: 90px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 570px) {
+    .edit {
+        .details {
+            min-width: unset;
+            width: unset;
+        }
+
+        .app-btn {
+            color: white;
+            background-color: #2d383a;
+            margin-top: 10px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 15px;
+            padding: 0 8px;
+            cursor: pointer;
+            width: 70%;
+            margin-bottom: 5px;
+            align-self: center;
+
+        }
+    }
+}
+
+@media (max-width: 570px) {
+
+
+
+    .edit {
+
+        .unsaved-changes,
+        .saved-changes {
+            font-size: 12px;
+        }
+
+        .details {
+            width: 400px;
+        }
+
+        .multi-options {
+            width: 70%;
+        }
+
+        .colors,
+        .sizes {
+            width: 45%;
+        }
+
+        .app-btn {
+            align-self: unset;
+        }
+
+        .mar-btm {
+            width: 50%;
+        }
+    }
+
+
+
 }
