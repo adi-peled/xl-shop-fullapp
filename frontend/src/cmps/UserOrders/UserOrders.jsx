@@ -31,11 +31,11 @@ export default function UserOrders(props) {
                         <img src={order.items[0].imgUrls[0]} alt="" />
                         <div className="flex column">
                             <div className="order-details">
-                                <p>create at: {order.createdAt}</p>
-                                <p className="text-he">{order.id} <label htmlFor="">:מספר הזמנה</label></p>
+                                <p>create at: {new Date(order.createdAt).toLocaleDateString('en-GB')}</p>
+                                <p className="text-he">  <label >id:</label>{order.id} </p>
                                 <p>Items: {order.items.length}</p>
-                                <p>Total: {order.totalPrice}</p>
-                                <Link to={`/order/${order.id}`}>פירוט הזמנה</Link>
+                                <p>Total: ${order.totalPrice}</p>
+                                <Link to={`/order/${order.id}`}>order details</Link>
                             </div>
                         </div>
                     </div>

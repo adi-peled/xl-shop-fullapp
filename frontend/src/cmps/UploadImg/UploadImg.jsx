@@ -8,8 +8,8 @@ export default function UploadImg(props) {
             .then(res => props.uploadImg(res.url))
     }
     return (
-        <div>
-            <input type="file" onChange={(event) => showImgUrl(event)} />
+        <div className="file-input">
+            <input type="file"  onChange={(event) => showImgUrl(event)} />
         </div>
     )
 }

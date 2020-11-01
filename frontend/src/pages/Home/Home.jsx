@@ -13,12 +13,12 @@ import utilService from '../../services/utilService'
 class _Home extends Component {
     state = {
         types: [
-           
+
             {
                 str: "T-Shirts",
                 img: shirt
             },
-         
+
             {
                 str: "Coats",
                 img: shirt
@@ -26,7 +26,7 @@ class _Home extends Component {
             {
                 str: "Belts",
                 img: shirt
-            }, 
+            },
             {
                 str: "Jeans",
                 img: shirt
@@ -35,17 +35,17 @@ class _Home extends Component {
     }
 
     componentDidMount() {
-
+        window.scrollTo(0, 0)
         this.props.loadItems()
     }
 
 
     toggleLike = async (ev, liked, item) => {
         ev.preventDefault()
-        if (!this.props.user){
-                utilService.swal('center',2500,'error','Please login')
-                return
-        } 
+        if (!this.props.user) {
+            utilService.swal('center', 2500, 'error', 'Please login')
+            return
+        }
         if (liked) {
             const index = this.props.user.favs.findIndex(i => i._id === item._id)
             this.props.user.favs.splice(index, 1)
@@ -61,7 +61,7 @@ class _Home extends Component {
         return (
             <section className="home">
                 <div className="hero-background"></div>
-                    <h2>Categories</h2>
+                <h2>Categories</h2>
                 <div className="types flex">
                     {this.state.types.map(type => {
                         return <Link key={type.str} to={'shop/' + type.str} className="browse-type">

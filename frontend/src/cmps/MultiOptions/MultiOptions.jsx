@@ -43,7 +43,7 @@ export default function MultiOptions(props) {
 
     return (
 
-        <div>
+        <div className="multi-options">
 
             <div className="colors flex column">
                 colors:

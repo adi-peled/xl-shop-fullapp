@@ -14,9 +14,9 @@ class _Edit extends Component {
         isClrsSaved: false,
         isSizesSaved: false,
         shirts: ['Polo-Shirts', 'T-Shirts', 'Button-Down-Shirts'],
-        pants: ['Elegant-Pשnts', 'Jeans', 'Cotton-Pants'],
+        pants: ['Elegant-Pants', 'Jeans', 'Cotton-Pants'],
         accessories: ['Coats', 'Suits', 'Socks', 'Belts', 'Underpants', 'Tank - Tops', 'Ties',
-            'Tricot', 'Potter - shorts', 'Sweaters', 'Shlikes', 'Bermudas', 'Cardigans', 'Hoddies'],
+            'Tricot', 'Potter - Shorts', 'Sweaters', 'Shlikes', 'Bermudas', 'Cardigans', 'Hoddies'],
     }
 
     async componentDidMount() {
@@ -112,7 +112,7 @@ class _Edit extends Component {
 
         return (
             <form className="edit flex" onSubmit={this.saveItem} >
-                <div>
+                <div className="upload ">
                     <UploadImg uploadImg={this.onUploadImg} ></UploadImg>
                     {item.imgUrls.map(imgUrl => {
                         return <div key={imgUrl}>
@@ -122,11 +122,11 @@ class _Edit extends Component {
                     })}
                 </div>
                 <div className="details">
-                    <div className="name">
+                    <div className="name mar-btm">
                         <span> name:</span>
                         <input className="app-input" type="text" name="name" value={item.name} onChange={this.handleChange} />
                     </div>
-                    <div className="subCategory">
+                    <div className="subCategory mar-btm">
                         <span >Category: </span>
                         <select className="app-input" name="category" value={item.category} onChange={this.handleChange} >
                             <option value="shirts">Shirts</option>
@@ -134,7 +134,7 @@ class _Edit extends Component {
                             <option value="accessories">Accessories</option>
                         </select>
                     </div>
-                    <div className="subCategory">
+                    <div className="subCategory mar-btm">
                         <span >Subcategory: </span>
                         <select className="app-input" name="subcategory" value={item.subcategory} onChange={this.handleChange} >
                             {this.state[item.category].map(sub => {
@@ -153,7 +153,7 @@ class _Edit extends Component {
                         item={item}
                     />
 
-                    <div className="price">
+                    <div className="price mar-btm">
                         <span >price: </span>
                         <input className="app-input" type="number" name="price" value={item.price} onChange={this.handleChange} />
                     </div>

@@ -52,7 +52,7 @@ export function Footer() {
                         </li>
                         <li>
                             <LocationSvg className="svg"></LocationSvg>
-                            <label >   Address :  רחוב בילו 23 מול הקניון (רחובות)</label>
+                            <label >Address:  Bilu Street 23 Rehovot </label>
                         </li>
                     </ul>
                 </div>
@@ -81,7 +81,7 @@ export function Footer() {
                     </ul>
                 </div>
             </div>
-      
+
 
         </footer>
 
