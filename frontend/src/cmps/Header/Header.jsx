@@ -10,6 +10,7 @@ import { ReactComponent as ShopSvg } from '../../assets/img/shop.svg';
 import { ReactComponent as CartSvg } from '../../assets/img/cart.svg';
 import { ReactComponent as MenuSvg } from '../../assets/img/menu.svg';
 import { ReactComponent as ProfileSvg } from '../../assets/img/profile.svg';
+import { ReactComponent as LogoSvg } from '../../assets/logo.svg';
 //logo
 import logo from '../../assets/logo.png'
 
@@ -32,7 +33,6 @@ function _Header(props) {
 
 
     function toggleMenu() {
-        console.log('setstyle');
         if (style.opacity === '0') {
             setStyle(style => ({ ...style, opacity: '1', transform: 'translateX(0%)' }))
         } else {
@@ -43,7 +43,7 @@ function _Header(props) {
 
     return (
         <header className="header flex">
-            <NavLink className="logo" activeClassName='active-path' to="/" exact ><img src={logo} /></NavLink>
+            <NavLink className="logo" activeClassName='active-path' to="/" exact ><LogoSvg/> </NavLink>
             <div onClick={() => toggleMenu()} className={`screen ${style.opacity === '1' ? 'menu-open' : ''}`}></div>
 
             <ul className="flex nav-header">

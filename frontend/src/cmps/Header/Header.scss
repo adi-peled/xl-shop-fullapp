@@ -55,10 +55,14 @@ header {
 
     .logo {
         color: whitesmoke;
+        fill: whitesmoke ;   
 
-        img {
+        svg {
             width: 70px;
             height: 70px;
+            path{
+                fill: whitesmoke;
+            }
         }
     }
 

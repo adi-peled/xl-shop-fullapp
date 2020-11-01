@@ -155,12 +155,7 @@ function _Cart(props) {
                 <p>
                     Total : ${order.totalPrice}
                 </p>
-                <div>
-                    משלוחים לכל הארץ
-                    משלוח מסכום של 300 ש"ח חינם
-                    דמי משלוח בפחות מ-300 ש"ח יהיו בסך 45 ש"ח
-                    החזרת מוצר וביטול עיסקה עד חודש עם הגעה למקום פיזית עם המוצר
-                </div>
+                
                 <button onClick={buyCart}>  Buy Now </button>
             </div>}
 

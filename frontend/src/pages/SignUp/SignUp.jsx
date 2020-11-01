@@ -40,7 +40,7 @@ class _SignUp extends Component {
       return
 
     }
-    utilService.swal('center',2500,'error','Please check your eMail to activate your account')
+    utilService.swal('center',2500,'success','Please check your eMail to activate your account')
 
     this.props.setUser()
     this.props.history.push('/')

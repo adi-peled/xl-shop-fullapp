@@ -35,7 +35,6 @@ export function Filter(props) {
         const pageY = rect.bottom
 
         setState(state => ({ ...state, [style]: { ...state[style], top: pageY, display: 'flex' } }))
-        console.log(pageY, style, state);
     }
 
 

@@ -27,7 +27,6 @@ export default function UserOrders(props) {
                 </div>}
             <div className="orders-list">
                 {user.orders.map(order => {
-                    console.log(order.id);
                     return <div className="order" key={order.id}>
                         <img src={order.items[0].imgUrls[0]} alt="" />
                         <div className="flex column">
